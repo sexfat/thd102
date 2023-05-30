@@ -1,0 +1,131 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+  height: 1920;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ededed;
+}
+
+[class*='col-'] {
+
+  background-color: #ffc1c1;
+  opacity: .8;
+}
+
+
+.banner {
+  height: 400px;
+  position: relative;
+  background-color: #b8b8b8;
+}
+
+.banner .title {
+   position: absolute;
+   left: 180px;
+   top:  100px ;
+
+}
+
+
+
+.item {
+  height: 300px;
+  background-color: #b8b8b8;
+
+}
+
+
+.area {
+  height: 400px;
+   
+
+}
+
+
+.col-1 {
+  width: 8.333333%;
+}
+
+.col-2 {
+  width: 16.666666%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333%;
+}
+
+.col-5 {
+  width: 41.666666%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333%;
+}
+
+.col-8 {
+  width: 66.666666%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333%;
+}
+
+.col-11 {
+  width: 91.666666%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+
+.push-col-4 {
+  position: relative;
+  left: 33.333333%;
+}
+
+
+
+.btn {
+  border: 1px solid #2939CC;
+  padding: 20px 12px;
+  background-color: #2939CC;
+  text-align: center;
+  font-size: 16px;
+  color: #fff; 
+  border-radius: 5px;
+}
+
+.round {
+   border-radius: 40px;
+}
+
+.outline {
+  background-color: initial;
+  border-width: 2px;
+  color: #2939CC;
+}
+
+.text {
+ border: initial;
+ background-color: initial;
+ color: #2939CC;
+}
