@@ -95,13 +95,13 @@ h1 {
   font-size: 40px;
   color: #333;
 }
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 890px) {
   h1 {
     font-size: 60px;
     color: #2e3fff;
   }
 }
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 500px) {
   h1 {
     font-size: 90px;
     color: rgb(255, 0, 191);

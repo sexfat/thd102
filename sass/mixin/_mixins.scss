@@ -30,3 +30,24 @@
         margin: auto;
     }
    } 
+
+
+ //手機板
+@mixin m() {
+    @media screen and (max-width: $m) {
+        @content;
+    }
+}
+
+//平板
+@mixin t() {
+    @media screen and (max-width: $t) {
+        @content;
+    }
+}  
+// 自己設定
+@mixin d($b){
+    @media screen and (max-width: $b) {
+        @content;
+    }
+}

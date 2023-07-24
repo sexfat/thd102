@@ -52,26 +52,14 @@
 //    @include fontDefault(30px)
 // }
 
-//手機板
-@mixin m() {
-    @media screen and (max-width: $m) {
-        @content;
-    }
-}
 
-//平板
-@mixin t() {
-    @media screen and (max-width: $t) {
-        @content;
-    }
-}
 
 
 h1 {
     font-size: 40px;
     color: #333;
-
-    @include t() {
+//自己設定斷點
+    @include d(890px) {
         font-size: 60px;
         color: #2e3fff
     }
