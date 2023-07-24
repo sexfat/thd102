@@ -45,6 +45,7 @@ body {
 
     header {
         display: flex;
+        justify-content: space-between;
 
         h1.logo {
             width: 150px;
@@ -53,17 +54,27 @@ body {
         }
 
         nav {
-            width: 800px;
 
             ul {
                 list-style: none;
                 display: flex;
-                flex-direction: column;
                 li {
                     padding: 10px 20px;
                     text-align: center;
                     background-color: #794300;
                     color: #fff;
+                    cursor: pointer;
+                    transition:all .3s ease;
+                    &:hover {
+                         background-color: #ffe600;
+
+                    }
+                    &:nth-child(2) {
+                       background-color: #2fff00;
+                       &:hover {
+                        background-color: #ca5800;
+                       }
+                    }
                 }
             }
 

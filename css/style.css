@@ -18,25 +18,33 @@ body {
 }
 .wrapper_full header {
   display: flex;
+  justify-content: space-between;
 }
 .wrapper_full header h1.logo {
   width: 150px;
   height: 80px;
   background-color: #00ff95;
 }
-.wrapper_full header nav {
-  width: 800px;
-}
 .wrapper_full header nav ul {
   list-style: none;
   display: flex;
-  flex-direction: column;
 }
 .wrapper_full header nav ul li {
   padding: 10px 20px;
   text-align: center;
   background-color: #794300;
   color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.wrapper_full header nav ul li:hover {
+  background-color: #ffe600;
+}
+.wrapper_full header nav ul li:nth-child(2) {
+  background-color: #2fff00;
+}
+.wrapper_full header nav ul li:nth-child(2):hover {
+  background-color: #ca5800;
 }
 
 /*# sourceMappingURL=style.css.map */
