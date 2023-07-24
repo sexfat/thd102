@@ -13,19 +13,7 @@ body {
 }
 
 .wrapper {
-    @if $layout ==100 {
-        width: $layout * 1%;
-    }
-
-    @else if $layout < 100 {
-        width: $layout * 1%;
-        margin: auto;
-    }
-
-    @else {
-        width: $layout + px;
-        margin: auto;
-    }
+   @include layout(80);
    @import 'header';
    @import 'footer';
 }
