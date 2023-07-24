@@ -1,34 +1,40 @@
-/*css 註解*/
-//變數型態
-$fontsize : 16px; // 數字
-$fontfamily : Arial,
-Helvetica,
-sans-serif; //字串
-$margin : 0; // list
-$fontColor : #333; // color
-$title : (key : value,
-    h1 : 40px,
-    h2 : 36px); // map
+// base
+@import 'base/base';
+@import 'base/color';
+@import 'base/font';
+@import 'base/spacing';
 
-h1.title {
-    font-size: map-get($title, h2);
-}
+// mixin
+@import 'mixin/mixins';
 
-$fontWeight : false; // 布林值 
+// component
+@import 'component/btn';
+@import 'component/form';
+@import 'component/table';
+@import 'component/title';
 
-body {
-    $font : 20px;
-    font-family: $fontfamily;
-    font-size: $fontsize;
-    margin: $margin;
-    padding: 0;
-    color: $fontColor;
-    background-color: #92ffdb;
+// layout
+@import 'layout/body';
 
-    @if $fontWeight {
-        font-weight: 400
-    }
-}
+// page
+@import 'page/index';
+@import 'page/about';
+
+// plugin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ======  設定變數 ======
 // 字體
@@ -41,73 +47,8 @@ body {
 
 // header
 
-$layout : 90;
-
-.wrapper {
-    @if $layout ==100 {
-        width: $layout * 1%;
-    }
-
-    @else if $layout < 100 {
-        width: $layout * 1%;
-        margin: auto;
-    }
-
-    @else {
-        width: $layout + px;
-        margin: auto;
-    }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-
-        h1.logo {
-            width: 150px;
-            height: 80px;
-            background-color: #00ff95;
-        }
-
-        nav {
-            ul {
-                list-style: none;
-                display: flex;
-
-                li {
-                    padding: 10px 20px;
-                    text-align: center;
-                    background-color: #794300;
-                    color: #fff;
-                    cursor: pointer;
-                    transition: all .3s ease;
-                    a {
-                      text-decoration: none;  
-                      color : #fff  
-                    }
-
-                    &:hover {
-                        background-color: #ffe600;
-
-                    }
-
-                    &:nth-child(2) {
-                        background-color: #2fff00;
-
-                        &:hover {
-                            background-color: #ca5800;
-                        }
-                    }
-                }
-            }
 
 
-        }
-
-    }
-
-    footer {}
-
-}
 
 // 首頁
 .index {
@@ -124,8 +65,6 @@ $layout : 90;
 //關於我們
 .about {
     .container {
-
-
-
+        width: 100%;
     }
 }
