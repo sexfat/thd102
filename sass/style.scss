@@ -1,20 +1,20 @@
 /*css 註解*/
 //變數型態
 $fontsize : 16px; // 數字
-$fontfamily : Arial, Helvetica, sans-serif; //字串
-$margin : 10px 20px ; // list
+$fontfamily : Arial,
+Helvetica,
+sans-serif; //字串
+$margin : 10px 20px; // list
 $fontColor : #333; // color
-$title : (
-  key : value,
-  h1  : 40px,
-  h2 : 36px
-); // map
+$title : (key : value,
+    h1 : 40px,
+    h2 : 36px); // map
 
 h1.title {
-   font-size:  map-get($title, h2);
+    font-size: map-get($title, h2);
 }
 
-$fontWeight  : false; // 布林值 
+$fontWeight : false; // 布林值 
 
 body {
     $font : 20px;
@@ -24,10 +24,12 @@ body {
     padding: 0;
     color: $fontColor;
     background-color: #92ffdb;
+
     @if $fontWeight {
-        font-weight:400
+        font-weight: 400
     }
 }
+
 // ======  設定變數 ======
 // 字體
 // 顏色
@@ -37,3 +39,41 @@ body {
 // 標題字 大小 顏色
 
 
+// header
+.wrapper_full {
+    width: 100%;
+
+    header {
+        display: flex;
+
+        h1.logo {
+            width: 150px;
+            height: 80px;
+            background-color: #00ff95;
+        }
+
+        nav {
+            width: 800px;
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                li {
+                    padding: 10px 20px;
+                    text-align: center;
+                    background-color: #794300;
+                    color: #fff;
+                }
+            }
+
+
+        }
+
+    }
+
+
+
+
+
+}

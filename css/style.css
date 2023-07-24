@@ -13,4 +13,30 @@ body {
   background-color: #92ffdb;
 }
 
+.wrapper_full {
+  width: 100%;
+}
+.wrapper_full header {
+  display: flex;
+}
+.wrapper_full header h1.logo {
+  width: 150px;
+  height: 80px;
+  background-color: #00ff95;
+}
+.wrapper_full header nav {
+  width: 800px;
+}
+.wrapper_full header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper_full header nav ul li {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #794300;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
