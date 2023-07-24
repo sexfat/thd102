@@ -25,6 +25,42 @@
 
 
 
+//mixin
+
+@mixin rect($w , $h){
+    width: $w;
+    height: $h;
+}
+
+@mixin center($w , $h){
+  margin: 0 auto;
+  @include rect($w , $h)
+}
+
+.box {
+  @include center(100px , 100px);
+}
+.box_default {
+   @include center(150px, 150px);
+}
+.box_large {
+    @include center(300px, 300px);
+}
+
+
+.card {
+  @include rect(80%, 300px);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
