@@ -8,32 +8,28 @@
   transition: all 0.3s ease;
 }
 .btn.primary {
+  border-radius: 10px;
   background-color: #003cff;
 }
 .btn.primary:hover {
   background-color: #0030cc;
   color: #f6f6f6;
 }
+
+.btn {
+  padding: 10px 30px;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 .btn.secondary {
+  border-radius: 20px;
   background-color: #0cd0a9;
 }
 .btn.secondary:hover {
   background-color: #09a082;
   color: #f6f6f6;
-}
-.btn.warning {
-  background-color: #ff8800;
-}
-.btn.error {
-  background-color: #e50618;
-}
-.btn.outline {
-  border: 1px solid #003cff;
-  background-color: initial;
-  color: #003cff;
-}
-.btn.radius {
-  border-radius: 12px;
 }
 
 h1.title {
