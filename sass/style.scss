@@ -17,6 +17,7 @@ h1.title {
 $fontWeight  : false; // 布林值 
 
 body {
+    $font : 20px;
     font-family: $fontfamily;
     font-size: $fontsize;
     margin: $margin;
@@ -27,5 +28,12 @@ body {
         font-weight:400
     }
 }
+// ======  設定變數 ======
+// 字體
+// 顏色
+// 斷點
+// grid col
+// 按鈕尺吋 顏色
+// 標題字 大小 顏色
 
 
