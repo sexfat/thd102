@@ -40,21 +40,27 @@ body {
 
 
 // header
-.wrapper_full {
-    width: 100%;
 
+$layout : 1366;
+.wrapper {
+    @if $layout == 100 {
+        width: 100%;
+    }@else {
+      width: $layout + px;
+      margin: auto;
+    }
+  
     header {
         display: flex;
         justify-content: space-between;
-
+    
         h1.logo {
             width: 150px;
             height: 80px;
             background-color: #00ff95;
         }
-
+    
         nav {
-
             ul {
                 list-style: none;
                 display: flex;
@@ -67,7 +73,7 @@ body {
                     transition:all .3s ease;
                     &:hover {
                          background-color: #ffe600;
-
+    
                     }
                     &:nth-child(2) {
                        background-color: #2fff00;
@@ -77,14 +83,18 @@ body {
                     }
                 }
             }
-
-
+    
+    
         }
-
+    
     }
 
+    footer{
+    
+    }
 
+}
 
-
-
+.container{
+    
 }
