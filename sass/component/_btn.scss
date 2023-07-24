@@ -20,7 +20,7 @@
 //    }
 //    &.warning {
 //      background-color: $warning;
-     
+
 //    }
 //    &.error {
 //       background-color: $error;
@@ -36,34 +36,55 @@
 
 // }
 
-@mixin btn($class , $bgc , $bdr:null){
-.btn {
+@mixin btn($class , $bgc , $outline , $bdr: null) {
+  .btn {
     padding: 10px 30px;
     text-align: center;
-    color : $black;
+    color: $black;
     cursor: pointer;
-    transition: all .3s ease;   
-    &.#{$class}{
-      border-radius: $bdr;
-      background-color: $bgc;
-      &:hover {
-        background-color: darken($bgc , 10);
-        color: $white;
-     }
-    }
+    transition: all .3s ease;
+      &.#{$class} {
+        border-radius: $bdr;
+        background-color: $bgc;
+        border-color: $bgc;
+        &:hover {
+          background-color: darken($bgc , 10);
+          color: $white;
+        }
+      }
+      @if $outline {
+       &.outline { 
+         border-width: 1px;
+         border-style: solid;
+         background-color: initial;
+       }      
+      }
   }
 }
 
-@include btn(primary,  $primary , 10px);
-@include btn(secondary,  $secondary ,20px);
-@include btn(warning,  $warning ,20px);
-@include btn(error,  $error ,20px);
+// @mixin btn_outline($class , $bgc , $bdr: null) {
+//   .btn {
+//     padding: 10px 30px;
+//     text-align: center;
+//     color: $black;
+//     cursor: pointer;
+//     transition: all .3s ease;
+//       &.#{$class} {
+//         border-radius: $bdr;
+//         border:1px solid $bgc;
+//         &:hover {
+//           background-color: $bgc;
+//           color: $white;
+//         }
+//       }
+//   }
+// }
 
 
 
 
 
-
-
-
-
+@include btn(primary, $primary ,false ,10px);
+@include btn(primary, $primary ,true,10px);
+@include btn(secondary, $secondary ,true,10px);
+@include btn(error, rgb(255, 94, 0) ,true,30px);
