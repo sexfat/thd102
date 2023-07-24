@@ -3,7 +3,7 @@
    text-align: center;
    color : $black;
    cursor: pointer;
-   transition: all .3s ease; 
+   transition: all .3s ease;    
    &.primary {
      background-color: $primary;
      &:hover {
@@ -32,7 +32,6 @@
    }
    &.radius {
      border-radius: $border-radius-3;
-
    } 
 
 }
