@@ -1,0 +1,14 @@
+
+// @include rect(寬 ,高, 圓角); // 
+@mixin rect($w , $h , $borderRadius:null){
+    width: $w;
+    height: $h;
+    border-radius: $borderRadius;
+}
+
+
+// @include center(寬 ,高) 置中
+@mixin center($w , $h){
+  margin: 0 auto;
+  @include rect($w , $h)
+}
