@@ -27,46 +27,57 @@
 
 //mixin
 .box {
-  @include center(100px , 100px);
+    @include center(100px, 100px);
 }
+
 .box_default {
-   @include center(150px, 150px);
+    @include center(150px, 150px);
 }
+
 .box_large {
     @include center(300px, 300px);
 }
 
-
 .card {
-  @include rect(100px , 100px);
+    @include rect(100px, 100px);
 }
 
 
+// @mixin fontDefault($f){
+//     font-size: $f;
+//     @content;
+// }
+
+// .titles {
+//    @include fontDefault(30px)
+// }
+
+//手機板
+@mixin m() {
+    @media screen and (max-width: $m) {
+        @content;
+    }
+}
+
+//平板
+@mixin t() {
+    @media screen and (max-width: $t) {
+        @content;
+    }
+}
 
 
+h1 {
+    font-size: 40px;
+    color: #333;
 
+    @include t() {
+        font-size: 60px;
+        color: #2e3fff
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @include m() {
+        font-size: 90px;
+        color: rgb(255, 0, 191)
+    }
+}

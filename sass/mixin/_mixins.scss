@@ -13,7 +13,9 @@
   @include rect($w , $h)
 }
 
-//layout
+
+
+//layout  $layout < 100  --> 90%   or == 100 -> 100%  
 @mixin layout($layout){
     @if $layout ==100 {
         width: $layout * 1%;

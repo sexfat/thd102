@@ -14,10 +14,11 @@ body {
 }
 
 .wrapper {
-  width: 80%;
-  margin: auto;
+  width: 100%;
 }
 .wrapper header {
+  width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
 }
@@ -52,7 +53,9 @@ body {
   background-color: #ca5800;
 }
 .wrapper footer {
-  width: 100%;
+  width: 90%;
+  margin: auto;
+  background-color: #ffc801;
 }
 
 .index .container .banner {
@@ -86,6 +89,23 @@ body {
 .card {
   width: 100px;
   height: 100px;
+}
+
+h1 {
+  font-size: 40px;
+  color: #333;
+}
+@media screen and (max-width: 996px) {
+  h1 {
+    font-size: 60px;
+    color: #2e3fff;
+  }
+}
+@media screen and (max-width: 428px) {
+  h1 {
+    font-size: 90px;
+    color: rgb(255, 0, 191);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

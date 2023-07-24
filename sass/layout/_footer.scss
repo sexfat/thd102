@@ -1,3 +1,4 @@
 footer {
-    width: 100%;
+    @include layout(90);
+    background-color: #ffc801;
 }

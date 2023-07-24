@@ -13,7 +13,7 @@ body {
 }
 
 .wrapper {
-   @include layout(80);
+   @include layout(100);
    @import 'header';
    @import 'footer';
 }
