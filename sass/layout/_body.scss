@@ -17,3 +17,7 @@ body {
    @import 'header';
    @import 'footer';
 }
+
+.w30 {
+  @include layout(30); 
+}
