@@ -12,6 +12,7 @@
 @import 'component/form';
 @import 'component/table';
 @import 'component/title';
+@import 'component/grid';
 
 // layout
 @import 'layout/body';
@@ -58,7 +59,8 @@
 h1 {
     font-size: 40px;
     color: #333;
-//自己設定斷點
+
+    //自己設定斷點
     @include d(890px) {
         font-size: 60px;
         color: #2e3fff
@@ -69,3 +71,33 @@ h1 {
         color: rgb(255, 0, 191)
     }
 }
+
+@mixin push($num , $dir) {
+    @for $i from 1 through $num {
+        .push#{$dir}-#{$i} {
+            position: relative;
+            #{$dir}: $i * 1px;
+        }
+    }
+}
+
+@include push(20, left);
+@include push(20, top);
+
+
+
+.col-1 {
+    width: 8.33333%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+
+
+
+
+
+

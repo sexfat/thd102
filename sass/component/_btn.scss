@@ -56,6 +56,9 @@
 
 @include btn(primary,  $primary , 10px);
 @include btn(secondary,  $secondary ,20px);
+@include btn(warning,  $warning ,20px);
+@include btn(error,  $error ,20px);
+
 
 
 

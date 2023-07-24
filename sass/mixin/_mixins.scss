@@ -51,3 +51,12 @@
         @content;
     }
 }
+
+
+@mixin grid($num , $r:null) {
+    @for $i from 1 through $num {
+        .col-#{$r}#{$i} {
+            width: ($i / $num) * 100%;
+        }
+    }
+}
