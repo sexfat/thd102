@@ -547,4 +547,20 @@ h1 {
   width: 100%;
 }
 
+.a1_bg {
+  background-image: url("images/a1.jpg");
+}
+
+.a2_bg {
+  background-image: url("images/a2.jpg");
+}
+
+.b1_bg {
+  background-image: url("images/b1.jpg");
+}
+
+.b2_bg {
+  background-image: url("images/b2.jpg");
+}
+
 /*# sourceMappingURL=style.css.map */

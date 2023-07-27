@@ -95,6 +95,21 @@ h1 {
 }
 
 
+// @each
+
+$list: a1 a2 b1 b2 ; // list
+
+@each $i in $list {
+.#{$i}_bg {
+    background-image: url('images/#{$i}.jpg');
+  } 
+}
+
+
+
+
+
+
 
 
 
