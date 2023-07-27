@@ -145,6 +145,29 @@ h1 : #999
     }
 } 
 
+$spacing :(
+ spacing-1 : 4px,
+ spacing-2 :8px,
+ spacing-3 : 12px
+);
+
+
+@each $k , $v in $spacing {
+    .#{$k} {
+       margin-top: $v;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

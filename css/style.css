@@ -666,4 +666,16 @@ div {
   background-color: #999;
 }
 
+.spacing-1 {
+  margin-top: 4px;
+}
+
+.spacing-2 {
+  margin-top: 8px;
+}
+
+.spacing-3 {
+  margin-top: 12px;
+}
+
 /*# sourceMappingURL=style.css.map */
