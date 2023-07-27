@@ -95,13 +95,13 @@ h1 {
 }
 
 //  var list
-@include img_bg(a1 a2 a3){
-      height: 540px;
-      background-color: #2e3fff;
+@include img_bg(a1 a2 a3) {
+    height: 540px;
+    background-color: #2e3fff;
 
 }
 
-@include img_bg(b1 b2 b3){
+@include img_bg(b1 b2 b3) {
     height: 300px;
     background-color: #87ff30;
     width: 100%;
@@ -109,54 +109,6 @@ h1 {
 
 // var map
 
-
-$titile_size : (
-  h1 : 50px,
-  h2 : 40px,
-  h3: 30px,
-  h4 : 28px,
-  span : 16px,
-  div : 20px,
-  '.box' : 36px 
-);
-
-@each $key , $value in $titile_size {
- #{$key} {
-    font-size: $value;
- }
-} 
-
-
-
-$color : (
-primary : #0033fe,
-secondary : #e1eb33,
-third : #c810f6,
-basic: #333,
-h1 : #999
-);
-
-@each $k , $v in $color {
-  .#{$k}-font {
-      color: $v
-    }
-  .#{$k}-bg {
-      background-color: $v; 
-    }
-} 
-
-$spacing :(
- spacing-1 : 4px,
- spacing-2 :8px,
- spacing-3 : 12px
-);
-
-
-@each $k , $v in $spacing {
-    .#{$k} {
-       margin-top: $v;
-    }
-}
 
 
 

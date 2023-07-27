@@ -76,3 +76,41 @@
         }
     }
 }
+
+
+// 距離大小
+@mixin sapcing($spacing) {
+    @each $k ,
+     $v in $spacing {
+         .#{$k} {
+             margin-top: $v;
+         }
+     }
+ }
+
+
+//標題大小
+@mixin titleSize($title_size) {
+
+    @each $key ,
+    $value in $title_size {
+        #{$key} {
+            font-size: $value;
+        }
+    }
+}
+
+//字顏色與背景色
+@mixin fontColor($color) {
+    @each $k ,
+    $v in $color {
+        .#{$k}-font {
+            color: $v
+        }
+
+        .#{$k}-bg {
+            background-color: $v;
+        }
+    }
+
+}
