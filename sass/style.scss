@@ -94,19 +94,7 @@ h1 {
     width: 100%;
 }
 
-
-// @each  
-@mixin img_bg($list) {
-    @each $i in $list {
-        .#{$i}_slider {
-            background-image: url('./images/#{$i}.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            @content;
-        }
-    }
-}
-
+//  var list
 @include img_bg(a1 a2 a3){
       height: 540px;
       background-color: #2e3fff;
@@ -118,3 +106,30 @@ h1 {
     background-color: #87ff30;
     width: 100%;
 }
+
+// var map
+
+
+$titile_size : (
+  h1 : 50px,
+  h2 : 40px,
+  h3: 30px,
+  h4 : 28px,
+  span : 16px,
+  div : 20px,
+  '.box' : 36px 
+);
+
+@each $key , $value in $titile_size {
+ #{$key} {
+    font-size: $value;
+ }
+} 
+
+
+
+
+
+
+
+

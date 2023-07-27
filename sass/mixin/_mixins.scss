@@ -63,3 +63,16 @@
         }
     }
 }
+
+// 圖片背景使用
+// @each  
+@mixin img_bg($list) {
+    @each $i in $list {
+        .#{$i}_slider {
+            background-image: url('./images/#{$i}.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            @content;
+        }
+    }
+}
