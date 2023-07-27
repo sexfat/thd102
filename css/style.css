@@ -547,20 +547,55 @@ h1 {
   width: 100%;
 }
 
-.a1_bg {
-  background-image: url("images/a1.jpg");
+.a1_slider {
+  background-image: url("./images/a1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 540px;
+  background-color: #2e3fff;
 }
 
-.a2_bg {
-  background-image: url("images/a2.jpg");
+.a2_slider {
+  background-image: url("./images/a2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 540px;
+  background-color: #2e3fff;
 }
 
-.b1_bg {
-  background-image: url("images/b1.jpg");
+.a3_slider {
+  background-image: url("./images/a3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 540px;
+  background-color: #2e3fff;
 }
 
-.b2_bg {
-  background-image: url("images/b2.jpg");
+.b1_slider {
+  background-image: url("./images/b1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  background-color: #87ff30;
+  width: 100%;
+}
+
+.b2_slider {
+  background-image: url("./images/b2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  background-color: #87ff30;
+  width: 100%;
+}
+
+.b3_slider {
+  background-image: url("./images/b3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  background-color: #87ff30;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
