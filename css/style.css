@@ -626,4 +626,44 @@ div {
   font-size: 36px;
 }
 
+.primary-font {
+  color: #0033fe;
+}
+
+.primary-bg {
+  background-color: #0033fe;
+}
+
+.secondary-font {
+  color: #e1eb33;
+}
+
+.secondary-bg {
+  background-color: #e1eb33;
+}
+
+.third-font {
+  color: #c810f6;
+}
+
+.third-bg {
+  background-color: #c810f6;
+}
+
+.basic-font {
+  color: #333;
+}
+
+.basic-bg {
+  background-color: #333;
+}
+
+.h1-font {
+  color: #999;
+}
+
+.h1-bg {
+  background-color: #999;
+}
+
 /*# sourceMappingURL=style.css.map */
