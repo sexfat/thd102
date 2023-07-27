@@ -31,7 +31,7 @@
     }
    } 
 
-
+//================ breakpoint ============================
  //手機板
 @mixin m() {
     @media screen and (max-width: $m) {
@@ -53,6 +53,8 @@
 }
 
 
+// ======================= grid =====================
+//grid
 @mixin grid($num , $r:null) {
     @for $i from 1 through $num {
         .col-#{$r}#{$i} {
@@ -91,7 +93,6 @@
 
 //標題大小
 @mixin titleSize($title_size) {
-
     @each $key ,
     $value in $title_size {
         #{$key} {
