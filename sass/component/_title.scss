@@ -2,6 +2,7 @@ h1.title {
     font-size: map-get($title, h2);
 }
 
+
 @include titleSize($title_size);
 
 @include fontColor($color_all);
