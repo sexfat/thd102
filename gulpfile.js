@@ -96,6 +96,13 @@ function includeHTML() {
 
 exports.html = includeHTML;
 
+function watchfile(){
+   watch(['*.html' , 'layout/*.html'], includeHTML);
+   watch(['sass/*.scss' , 'sass/**/*.scss'], styleSass);
+   watch('js/*.js' , minijs);
+}
+exports.w = watchfile;
+
 
 
 
