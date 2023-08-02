@@ -65,6 +65,20 @@ exports.js = minijs;
 
 
 
+// sass 編譯
+const sass = require('gulp-sass')(require('sass'));
+
+function styleSass() {
+    return src('./sass/*.scss')
+        .pipe(sass.sync().on('error', sass.logError))//編譯scss
+        .pipe(cleanCSS())// minify css
+        .pipe(dest('./dist/css'));
+}
+
+exports.style = styleSass;
+
+
+
 
 
 
