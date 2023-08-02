@@ -41,6 +41,22 @@ function copy(){
 exports.m = copy;
 
 
+//css 壓縮
+
+const cleanCSS = require('gulp-clean-css');
+
+function minify(){
+   return src('css/*.css')
+     .pipe(cleanCSS())
+     .pipe(dest('dist/css'))
+}
+
+exports.cssmini = minify;
+
+
+
+
+
 
 
 
