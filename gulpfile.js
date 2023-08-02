@@ -40,6 +40,10 @@ function copy(){
 
 exports.m = copy;
 
+//圖片打包
+function img_copy(){
+    return src(['images/*.*' , 'images/**/*.*']).pipe(dest('dist/images'))
+}
 
 //css 壓縮
 
@@ -57,7 +61,7 @@ const uglify = require('gulp-uglify');
 
 
 function minijs(){
- return  src('main.js')
+ return  src('js/*.js')
     .pipe(uglify())
     .pipe(dest('dist/js'))
 }
@@ -123,6 +127,8 @@ function browser(done) {
     });
     watch(['*.html' , 'layout/*.html'], includeHTML).on('change' , reload)
     watch(['sass/*.scss' , 'sass/**/*.scss'], styleSass).on('change' , reload)
+    watch(['images/*.*' , 'images/**/*.*'], img_copy).on('change' , reload)
+    watch('js/*.js', minijs).on('change' , reload)
     done();
 }
 
@@ -171,6 +177,17 @@ exports.c = clear;
 
 
 
+
+
+
+
+//開發用
+exports.dev = series(parallel(includeHTML , styleSass , minijs , img_copy) , browser);
+
+
+
+//上線用
+exports.online = series(clear ,parallel(includeHTML , styleSass , babel5 , min_images))
 
 
 
