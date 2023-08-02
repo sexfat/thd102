@@ -68,12 +68,16 @@ exports.js = minijs;
 // sass 編譯
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
 
 function styleSass() {
     return src('./sass/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass.sync().on('error', sass.logError))//編譯scss
         // .pipe(cleanCSS())// minify css
+        .pipe(autoprefixer({
+            cascade: false
+        }))
         .pipe(sourcemaps.write())
         .pipe(dest('./dist/css'));
 }
@@ -125,6 +129,18 @@ function browser(done) {
 exports.default = browser;
 
 
+const imagemin = require('gulp-imagemin');
+
+function min_images(){
+    return src('images/*.*')
+    .pipe(imagemin([
+        imagemin.mozjpeg({quality: 70, progressive: true}) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
+    ]))
+    .pipe(dest('dist/images'))
+}
+
+
+exports.pic = min_images
 
 
 
