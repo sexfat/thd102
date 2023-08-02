@@ -67,11 +67,14 @@ exports.js = minijs;
 
 // sass 編譯
 const sass = require('gulp-sass')(require('sass'));
+const sourcemaps = require('gulp-sourcemaps');
 
 function styleSass() {
     return src('./sass/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass.sync().on('error', sass.logError))//編譯scss
-        .pipe(cleanCSS())// minify css
+        // .pipe(cleanCSS())// minify css
+        .pipe(sourcemaps.write())
         .pipe(dest('./dist/css'));
 }
 
