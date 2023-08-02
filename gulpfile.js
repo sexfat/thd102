@@ -108,7 +108,7 @@ function watchfile(){
 exports.w = watchfile;
 
 
-
+//同步瀏覽器
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
@@ -129,6 +129,7 @@ function browser(done) {
 exports.default = browser;
 
 
+//壓縮圖片
 const imagemin = require('gulp-imagemin');
 
 function min_images(){
@@ -141,6 +142,21 @@ function min_images(){
 
 
 exports.pic = min_images
+
+
+// es6 -> es5
+const babel = require('gulp-babel');
+
+function babel5() {
+    return src('js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(dest('dist/js'));
+}
+
+
+exports.es = babel5;
 
 
 
