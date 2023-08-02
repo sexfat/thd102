@@ -10,7 +10,16 @@
 
 <body>
     <div class="wrapper index">
-       @@include('layout/header.html')
+       <header>
+    <h1 class="logo">logo</h1>
+    <nav>
+        <ul>
+            <li class="itme"><a href="index.html">首頁</a></li>
+            <li class="itme"><a href="about.html">關於我們</a></li>
+            <li class="itme">產品頁</li>
+        </ul>
+    </nav>
+</header>
         <div class="container">
             <div class="banner"></div>
             <h1>響應式字體大小</h1>
@@ -22,7 +31,11 @@
                 <div class="btn error outline">按鈕框線</div>
             </div>
         </div>
-       @@include('layout/footer.html')
+       <footer>
+    <ul>
+        <li>隱私權</li>
+    </ul>
+</footer>
     </div>
 
 </body>

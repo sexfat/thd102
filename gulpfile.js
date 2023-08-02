@@ -84,14 +84,19 @@ exports.style = styleSass;
 //html template
 const fileinclude = require('gulp-file-include');
 
-exports.html =  function includeHTML() {
+function includeHTML() {
     return src('*.html')
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(dest('./dist'));
+        .pipe(dest('./dist'))
 }
+
+
+exports.html = includeHTML;
+
+
 
 
 
