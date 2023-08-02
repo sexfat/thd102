@@ -1,0 +1,1 @@
+const a=(o,n)=>o*n;function ff(){return console.log("aa")}console.log(a(20,10));

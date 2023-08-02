@@ -53,6 +53,18 @@ function minify(){
 
 exports.cssmini = minify;
 
+const uglify = require('gulp-uglify');
+
+
+function minijs(){
+ return  src('main.js')
+    .pipe(uglify())
+    .pipe(dest('dist/js'))
+}
+exports.js = minijs;
+
+
+
 
 
 
