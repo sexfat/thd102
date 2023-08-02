@@ -34,7 +34,7 @@ exports.async = series(taskA , taskB);
 
 // 搬家
 function copy(){
-    return src(['*.html' , '*.js' , '!main.js' , '**/*.scss']).pipe(dest('dist'))
+    return src(['*.html' , '*.js' , '!main.js' , './**/*.scss']).pipe(dest('dist'))
 }
 //  過去檔案會有index about gulpfile 不會有main.js
 
