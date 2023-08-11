@@ -23,4 +23,8 @@ gsap.to('.box', {
     //opacity: 0,
     scale: 5,
     ease: "elastic.out(1, 0.3)"
-})
+});
+
+
+
+
