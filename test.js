@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import { gsap } from "gsap";
-import 'css/style.css';
+import './css/style.css';
 
 const x = 'webpack start';
 console.log(x);
