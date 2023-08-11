@@ -12,5 +12,6 @@ $('body').css('background-color' , '#202020');
 gsap.to('.box' , {
  x : 400,
  y : 500,
- duration: 3
+ duration: 3,
+ rotation: 180
 })
