@@ -1,0 +1,11 @@
+.box {
+    width: 80px;
+    height: 80px;
+    background-color: #61f300;
+ }
+
+
+ .wrapper {
+   width: 1200px;
+   margin: auto;
+ }
