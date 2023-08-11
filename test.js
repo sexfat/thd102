@@ -7,13 +7,13 @@ import { createApp } from 'vue'
 // import  App from 'src/app.vue';
 
 
-createApp({
-  data() {
-    return {
-      count: 0
-    }
-  }
-}).mount('#app')
+// createApp({
+//   data() {
+//     return {
+//       count: 0
+//     }
+//   }
+// }).mount('#app')
 
 
 // ========  ++++++++  =======
@@ -25,14 +25,25 @@ $('body').css('background-color', '#202020');
 
 
 //動畫
-gsap.to('.box', {
+
+const tl  = gsap.timeline();
+
+tl.to('.box' , {
     x: 400,
     y: 500,
-    duration: 3,
-    rotation: 180,
-    repeat: -1,
-    yoyo: true,
-    //opacity: 0,
-    scale: 5,
-    ease: "elastic.out(1, 0.3)"
+    duration: 6,
+    ease: "bounce.out"
+}).to('.box' , {
+    rotation: 360,
+    // repeat: -1,
+    duration: 3
+}).to('.box', {
+     x: 0,
+     y: 0,
+     duration: 2
+}).to('.box2' , {
+     backgroundColor: "red" 
 })
+
+
+//gsap.to('.box', { x : 600 , y : 400 , duration:10} )
