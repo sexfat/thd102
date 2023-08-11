@@ -3,6 +3,16 @@ import { gsap } from "gsap";
 //scss modules
 import './sass/style.scss';
 
+import { createApp } from 'vue'
+
+createApp({
+  data() {
+    return {
+      count: 0
+    }
+  }
+}).mount('#app')
+
 
 // ========  ++++++++  =======
 const x = 'webpack start';
