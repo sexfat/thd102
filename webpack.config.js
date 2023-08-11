@@ -17,20 +17,25 @@ module.exports = {
         filename: '[name].js'
     },              // 出口文件
     module: {
-        rules: [{
-            // 格式
-            test: /\.(sass|scss|css)$/,
-            //順序是由下到上 sass > css > style
-            use: [{
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                    publicPath: './dist'
-                }
+        rules: [
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
             },
-                'css-loader',
-                'sass-loader'
-            ],
-        }]
+            {
+                // 格式
+                test: /\.(sass|scss|css)$/,
+                //順序是由下到上 sass > css > style
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        publicPath: './dist'
+                    }
+                },
+                    'css-loader',
+                    'sass-loader'
+                ],
+            }]
 
     },              // 處裡對應模組
     plugins: [

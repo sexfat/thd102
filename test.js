@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import './sass/style.scss';
 
 import { createApp } from 'vue'
+// import  App from 'src/app.vue';
+
 
 createApp({
   data() {
