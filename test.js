@@ -1,7 +1,11 @@
 import $ from 'jquery';
 import { gsap } from "gsap";
-import './css/style.css';
+//css modules
+import './css/content.css';
+import './css/header.css';
+import './css/footer.css';
 
+// ========  ++++++++  =======
 const x = 'webpack start';
 console.log(x);
 
