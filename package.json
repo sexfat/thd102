@@ -4,7 +4,7 @@
   "description": "講義:\r https://spiny-cheese-0b2.notion.site/Sass-0bf5c6c7ba1c4f63b8b4c9513c4f810b",
   "main": "index.js",
   "scripts": {
-    "dev" : "webpack-dev-server",
+    "dev": "webpack-dev-server",
     "build": "webpack -p"
   },
   "repository": {

@@ -6,9 +6,12 @@ const {
 } = require('clean-webpack-plugin');
 
 
+const webpack = require('webpack');
+
+
 
 module.exports = {
-    entry: { index: './test.js'},               // 入口文件
+    entry: { index: './test.js' },               // 入口文件
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
@@ -37,13 +40,16 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             chunks: ['index'],  //選擇注入資源 chunk
-            inject: 'body', //預設<body> js </body>  head or body
+            inject: 'body', //預設<bod`y> js </body>  head or body
             template: './index.html',
             //來源
             filename: 'index.html'
             // 目的地
+        }),
+        new webpack.DefinePlugin({
+            __VUE_OPTIONS_API__: true,
+            __VUE_PROD_DEVTOOLS__: true,
         })
-
     ],            // 對應的插件
     devServer: {
         contentBase: './dist',
@@ -52,6 +58,12 @@ module.exports = {
         // 指定首頁檔案
         index: 'index.html',
         open: true
-    },         // 服務器配置
+    },
+    // 服務器配置
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.esm-bundler.js'
+        }
+    },
     mode: 'development'      // 開發模式配置
 }
