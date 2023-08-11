@@ -1,15 +1,14 @@
 import $ from 'jquery';
 import { gsap } from "gsap";
-//css modules
-import './css/content.css';
-import './css/header.css';
-import './css/footer.css';
+//scss modules
+import './sass/style.scss';
+
 
 // ========  ++++++++  =======
 const x = 'webpack start';
 console.log(x);
 
-//  被景色
+//  背景色
 $('body').css('background-color', '#202020');
 
 
